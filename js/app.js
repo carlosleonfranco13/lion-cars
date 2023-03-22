@@ -41,7 +41,7 @@ marca.addEventListener('change', e => {
     filtrarAuto();
 })
 year.addEventListener('change', e => {
-    datosBusqueda.year = e.target.value;
+    datosBusqueda.year = parseInt(e.target.value);
 
     filtrarAuto();
 })
@@ -105,6 +105,7 @@ function filtrarMarca(auto) {
 }
 function filtrarYear(auto) {
     const {year} = datosBusqueda;
+    console.log( year );
     if( year ){
         return auto.year === year;
     }
